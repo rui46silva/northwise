@@ -42,15 +42,19 @@ export function Nav() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-40">
-      <div className="container-page flex items-center justify-between py-5">
-        <a href="#main" aria-label={`${siteConfig.name} home`} className="shrink-0">
+      <div className="container-page flex items-center justify-between py-5 md:grid md:grid-cols-[1fr_auto_1fr]">
+        <a
+          href="#main"
+          aria-label={`${siteConfig.name} home`}
+          className="shrink-0 md:justify-self-start"
+        >
           <Logo className="h-9" />
         </a>
 
         {/* Desktop pill nav */}
         <nav
           aria-label="Primary"
-          className={`hidden items-center gap-1 rounded-full border px-2 py-2 backdrop-blur-md transition md:flex ${
+          className={`hidden items-center gap-1 rounded-full border px-2 py-2 backdrop-blur-md transition md:flex md:justify-self-center ${
             scrolled
               ? "border-white/10 bg-ink-900/70"
               : "border-white/10 bg-white/[0.04]"
@@ -74,7 +78,7 @@ export function Nav() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 md:justify-self-end">
           <a href="#start" className="hidden btn-primary md:inline-flex">
             <span className="bracket">Start a project.</span>
           </a>

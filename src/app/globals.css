@@ -9,7 +9,8 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* Smooth scrolling is handled in JS (SmoothScroll) with custom easing. */
+    scroll-behavior: auto;
     -webkit-text-size-adjust: 100%;
   }
 

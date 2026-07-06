@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Magnetic } from "./Magnetic";
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -84,12 +85,16 @@ export function Hero() {
             </p>
 
             <div className="mt-10 flex animate-fade-up flex-col justify-center gap-3 sm:flex-row">
-              <a href="#start" className="btn-primary w-full sm:w-auto">
-                <span className="bracket">Start a project.</span>
-              </a>
-              <a href="#solutions" className="btn-ghost w-full sm:w-auto">
-                Explore solutions
-              </a>
+              <Magnetic className="w-full sm:w-auto">
+                <a href="#start" className="btn-primary w-full sm:w-auto">
+                  <span className="bracket">Start a project.</span>
+                </a>
+              </Magnetic>
+              <Magnetic className="w-full sm:w-auto">
+                <a href="#solutions" className="btn-ghost w-full sm:w-auto">
+                  Explore solutions
+                </a>
+              </Magnetic>
             </div>
           </div>
         </div>

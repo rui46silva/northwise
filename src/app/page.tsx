@@ -6,8 +6,10 @@ import { Care } from "@/components/Care";
 import { Thinking } from "@/components/Thinking";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Stats } from "@/components/Stats";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       <Nav />
       <main id="main">
         <Hero />
+        <Stats />
         <Solutions />
         <Process />
         <Care />
@@ -24,6 +27,7 @@ export default function Home() {
       </main>
       <Footer />
       <ScrollReveal />
+      <SmoothScroll />
     </>
   );
 }

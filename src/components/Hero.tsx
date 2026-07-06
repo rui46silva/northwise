@@ -24,31 +24,38 @@ export function Hero() {
   const boxStyle = boxWidth ? { width: `${boxWidth}px` } : undefined;
 
   return (
-    <section className="relative isolate overflow-hidden pb-28 pt-40 md:pb-40 md:pt-48">
-      {/* Space background: starfield + glowing planet horizon */}
-      <div className="starfield animate-glow-pulse" aria-hidden="true" />
+    <section
+      className="relative isolate flex min-h-screen items-center overflow-hidden pt-24"
+      style={{ ["--horizon-y" as string]: "52%" }}
+    >
+      {/* Space background: blue atmosphere + glowing planet horizon */}
+      <div className="hero-space animate-glow-pulse" aria-hidden="true">
+        <div className="hero-atmo" />
+        <div className="hero-arc" />
+        <div className="hero-core" />
+      </div>
 
       <div className="container-page relative">
-        <div className="mx-auto w-fit max-w-full text-left">
-          <p style={boxStyle} className="eyebrow max-w-full animate-fade-up">
+        <div className="mx-auto w-fit max-w-full text-center">
+          <p style={boxStyle} className="eyebrow mx-auto max-w-full animate-fade-up">
             Web Development Studio / Northern Portugal
           </p>
 
           <h1
             ref={titleRef}
-            className="mt-6 w-fit max-w-full animate-fade-up text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl"
+            className="mx-auto mt-6 w-fit max-w-full animate-fade-up text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl"
           >
             Direction over noise.
           </h1>
 
-          <div style={boxStyle} className="max-w-full">
-            <p className="mt-7 animate-fade-up text-justify text-lg leading-relaxed text-slate-300">
+          <div style={boxStyle} className="mx-auto max-w-full">
+            <p className="mt-7 animate-fade-up text-justify text-lg leading-relaxed text-slate-200">
               Northwise builds strategic websites, landing pages and high-impact
               web experiences for businesses that need clarity, performance and
               growth.
             </p>
 
-            <div className="mt-10 flex animate-fade-up flex-col gap-3 sm:flex-row">
+            <div className="mt-10 flex animate-fade-up flex-col justify-center gap-3 sm:flex-row">
               <a href="#start" className="btn-primary w-full sm:w-auto">
                 <span className="bracket">Start a project.</span>
               </a>

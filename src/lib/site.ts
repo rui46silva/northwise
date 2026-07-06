@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Northwise",
   tagline: "Direction over noise.",
   description:
-    "Northwise builds strategic websites, landing pages and custom web platforms for businesses that need clarity, performance and growth. A web development studio in Northern Portugal.",
+    "Northwise builds strategic websites, landing pages and high-impact web experiences for businesses that need clarity, performance and growth. A web development studio in Northern Portugal.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://northwise.pt",
   locale: "en",
   email: process.env.CONTACT_TO_EMAIL ?? "hello@northwise.pt",
@@ -10,8 +10,8 @@ export const siteConfig = {
   keywords: [
     "web development studio",
     "web design Portugal",
+    "business websites",
     "landing pages",
-    "custom web platforms",
     "Next.js development",
     "SEO websites",
     "Northern Portugal web agency",

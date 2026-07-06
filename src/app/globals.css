@@ -96,89 +96,31 @@
   }
 }
 
-/* ─────────────────────────────────────────────────────────────
-   Hero space glow: a bright, curved planet horizon rising through
-   the middle of the hero, with a blue atmosphere blooming above and
-   below the line and a hot white-blue core at the peak of the arc.
-   ───────────────────────────────────────────────────────────── */
+/* Hero space background: the brand horizon photo, covering the hero,
+   with a fade at the bottom that blends into the next section. */
 .hero-space {
   position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  background: radial-gradient(
-    120% 80% at 50% 50%,
-    #051233 0%,
-    #030a20 45%,
-    #010208 100%
-  );
+  background-color: #010208;
 }
 
-/* Blue atmosphere blooming outward from the horizon line */
-.hero-atmo {
-  position: absolute;
-  left: 50%;
-  top: var(--horizon-y, 50%);
-  transform: translate(-50%, -50%);
-  width: 150vw;
-  height: 130vh;
-  background: radial-gradient(
-    50% 42% at 50% 50%,
-    rgba(70, 150, 255, 0.6) 0%,
-    rgba(34, 96, 220, 0.4) 26%,
-    rgba(16, 54, 150, 0.2) 45%,
-    rgba(6, 22, 70, 0.08) 62%,
-    rgba(2, 6, 20, 0) 80%
-  );
+.hero-space img {
+  object-fit: cover;
+  object-position: center 32%;
 }
 
-/* The glowing curved horizon line (top edge of a very large circle) */
-.hero-arc {
+/* Blend the bottom of the photo into the dark page below it */
+.hero-fade {
   position: absolute;
-  left: 50%;
-  top: var(--horizon-y, 50%);
-  transform: translateX(-50%);
-  width: 340vw;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background: transparent;
-  border-top: 2px solid rgba(226, 242, 255, 0.95);
-  box-shadow:
-    0 0 4px 1px rgba(210, 235, 255, 0.9),
-    0 0 28px 4px rgba(120, 190, 255, 0.7),
-    0 0 70px 12px rgba(60, 140, 255, 0.45);
-  /* Fade the line out toward the left and right edges */
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 22%,
-    #000 78%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 22%,
-    #000 78%,
-    transparent 100%
-  );
-}
-
-/* Hot white-blue core at the peak of the arc */
-.hero-core {
-  position: absolute;
-  left: 50%;
-  top: var(--horizon-y, 50%);
-  transform: translate(-50%, -50%);
-  width: min(680px, 70vw);
-  height: 300px;
-  background: radial-gradient(
-    50% 55% at 50% 50%,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(190, 224, 255, 0.75) 14%,
-    rgba(90, 170, 255, 0.35) 38%,
-    rgba(40, 120, 240, 0.12) 60%,
-    rgba(2, 6, 20, 0) 78%
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 55%,
+    rgba(2, 4, 16, 0.6) 85%,
+    var(--background) 100%
   );
 }
 

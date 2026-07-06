@@ -44,7 +44,7 @@ export function Nav() {
     <header className="fixed inset-x-0 top-0 z-40">
       <div className="container-page flex items-center justify-between py-5">
         <a href="#main" aria-label={`${siteConfig.name} home`} className="shrink-0">
-          <Logo className="h-9 w-9" />
+          <Logo className="h-9" />
         </a>
 
         {/* Desktop pill nav */}

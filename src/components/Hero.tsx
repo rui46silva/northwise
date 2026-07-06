@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLayoutEffect, useRef, useState } from "react";
 
 export function Hero() {
@@ -24,20 +25,26 @@ export function Hero() {
   const boxStyle = boxWidth ? { width: `${boxWidth}px` } : undefined;
 
   return (
-    <section
-      className="relative isolate flex min-h-screen items-center overflow-hidden pt-24"
-      style={{ ["--horizon-y" as string]: "52%" }}
-    >
-      {/* Space background: blue atmosphere + glowing planet horizon */}
-      <div className="hero-space animate-glow-pulse" aria-hidden="true">
-        <div className="hero-atmo" />
-        <div className="hero-arc" />
-        <div className="hero-core" />
+    <section className="relative isolate flex min-h-screen items-center overflow-hidden pb-[22vh] pt-24">
+      {/* Space background: brand horizon photo */}
+      <div className="hero-space" aria-hidden="true">
+        <Image
+          src="/background-northwise.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          quality={85}
+        />
+        <div className="hero-fade" />
       </div>
 
       <div className="container-page relative">
         <div className="mx-auto w-fit max-w-full text-center">
-          <p style={boxStyle} className="eyebrow mx-auto max-w-full animate-fade-up">
+          <p
+            style={boxStyle}
+            className="eyebrow mx-auto max-w-full animate-fade-up [text-shadow:0_1px_16px_rgba(1,6,20,0.7)]"
+          >
             Web Development Studio / Northern Portugal
           </p>
 
@@ -49,7 +56,7 @@ export function Hero() {
           </h1>
 
           <div style={boxStyle} className="mx-auto max-w-full">
-            <p className="mt-7 animate-fade-up text-justify text-lg leading-relaxed text-slate-200">
+            <p className="mt-7 animate-fade-up text-justify text-lg leading-relaxed text-slate-100 [text-shadow:0_2px_18px_rgba(1,6,20,0.85)]">
               Northwise builds strategic websites, landing pages and high-impact
               web experiences for businesses that need clarity, performance and
               growth.

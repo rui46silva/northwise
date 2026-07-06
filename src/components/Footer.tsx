@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container-page">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="max-w-sm">
-            <Logo className="h-9 w-9" withWordmark />
+            <Logo className="h-9" withWordmark />
             <p className="mt-4 text-sm leading-relaxed text-slate-400">
               {siteConfig.tagline} A web development studio in {siteConfig.location},
               building strategic websites and custom web platforms.

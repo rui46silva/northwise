@@ -18,8 +18,12 @@ export function Care() {
         />
 
         <div className="grid gap-5 sm:grid-cols-2">
-          {careItems.map((item) => (
-            <div key={item.title} className="card">
+          {careItems.map((item, i) => (
+            <div
+              key={item.title}
+              className="card reveal"
+              style={{ ["--reveal-delay" as string]: `${(i % 2) * 90}ms` }}
+            >
               <h3 className="text-lg font-semibold">{item.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-400">{item.body}</p>
             </div>

@@ -38,7 +38,7 @@ export function Process() {
           description="A clear, deliberate way of working. Every decision earns its place — nothing ships just because it looks busy."
         />
 
-        <ol className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:grid-cols-5">
+        <ol className="reveal mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:grid-cols-5">
           {steps.map((step) => (
             <li key={step.n} className="bg-ink-950 p-7">
               <span className="font-display text-2xl font-semibold text-brand-400">

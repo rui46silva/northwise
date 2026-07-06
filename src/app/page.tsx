@@ -6,10 +6,13 @@ import { Care } from "@/components/Care";
 import { Thinking } from "@/components/Thinking";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Nav />
       <main id="main">
         <Hero />
@@ -20,6 +23,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollReveal />
     </>
   );
 }

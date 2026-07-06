@@ -12,7 +12,11 @@ export function SectionHeading({
   align = "left",
 }: SectionHeadingProps) {
   return (
-    <div className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <div
+      className={`reveal ${
+        align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"
+      }`}
+    >
       <p className="eyebrow">
         <span className="bracket">{eyebrow}</span>
       </p>

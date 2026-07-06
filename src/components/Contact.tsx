@@ -61,7 +61,7 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card reveal hover:!translate-y-0 hover:!shadow-none [--reveal-delay:120ms]">
           {status === "success" ? (
             <div className="flex h-full flex-col items-center justify-center py-10 text-center">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-500/15 text-2xl text-brand-300">

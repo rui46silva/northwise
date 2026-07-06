@@ -44,8 +44,12 @@ export function Solutions() {
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {solutions.map((s) => (
-            <article key={s.title} className="card group">
+          {solutions.map((s, i) => (
+            <article
+              key={s.title}
+              className="card group reveal"
+              style={{ ["--reveal-delay" as string]: `${(i % 3) * 80}ms` }}
+            >
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-brand-400">[{s.tag}]</span>
                 <span className="h-2 w-2 rounded-full bg-brand-500/40 transition group-hover:bg-brand-400" />

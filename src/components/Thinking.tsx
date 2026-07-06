@@ -29,8 +29,12 @@ export function Thinking() {
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {articles.map((a) => (
-            <article key={a.title} className="card flex flex-col">
+          {articles.map((a, i) => (
+            <article
+              key={a.title}
+              className="card reveal flex flex-col"
+              style={{ ["--reveal-delay" as string]: `${(i % 3) * 80}ms` }}
+            >
               <span className="eyebrow">{a.category}</span>
               <h3 className="mt-4 text-lg font-semibold leading-snug">{a.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-400">{a.body}</p>

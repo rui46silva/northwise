@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const spaceRef = useRef<HTMLDivElement>(null);
   const [boxWidth, setBoxWidth] = useState<number>();
 
   // Match the eyebrow and body width to the rendered width of the title box.
@@ -22,12 +23,32 @@ export function Hero() {
     return () => ro.disconnect();
   }, []);
 
+  // Subtle parallax: the background drifts slower than the page as you scroll.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const el = spaceRef.current;
+    if (!el) return;
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        el.style.transform = `translate3d(0, ${window.scrollY * 0.18}px, 0)`;
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   const boxStyle = boxWidth ? { width: `${boxWidth}px` } : undefined;
 
   return (
     <section className="relative isolate flex min-h-screen items-center overflow-hidden pb-[22vh] pt-24">
       {/* Space background: brand horizon photo */}
-      <div className="hero-space" aria-hidden="true">
+      <div ref={spaceRef} className="hero-space will-change-transform" aria-hidden="true">
         <Image
           src="/background-northwise.png"
           alt=""

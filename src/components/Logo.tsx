@@ -1,30 +1,24 @@
+import Image from "next/image";
+
 type LogoProps = {
   className?: string;
   withWordmark?: boolean;
 };
 
 /**
- * Northwise mark — an upward double-stroke motif (north / rising direction).
+ * Northwise mark — the brand "M" symbol, optionally with the wordmark.
  */
-export function Logo({ className = "h-8 w-8", withWordmark = false }: LogoProps) {
+export function Logo({ className = "h-8 w-auto", withWordmark = false }: LogoProps) {
   return (
     <span className="inline-flex items-center gap-2.5">
-      <svg
-        viewBox="0 0 48 48"
-        fill="none"
-        className={className}
-        aria-hidden="true"
-        role="img"
-      >
-        <path
-          d="M4 34 L16 14 L24 26 L32 8 L44 30"
-          stroke="currentColor"
-          strokeWidth="6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="text-brand-500"
-        />
-      </svg>
+      <Image
+        src="/logo.png"
+        alt="Northwise"
+        width={99}
+        height={80}
+        priority
+        className={`w-auto object-contain ${className}`}
+      />
       {withWordmark && (
         <span className="font-display text-lg font-semibold tracking-tight text-white">
           northwise

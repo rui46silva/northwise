@@ -2,8 +2,8 @@ import { SectionHeading } from "./SectionHeading";
 
 const solutions = [
   {
-    title: "Web Development",
-    body: "Fast, accessible and scalable websites and apps built on modern foundations — engineered to last, not just to launch.",
+    title: "Business Websites",
+    body: "Corporate and business websites that present your work with clarity — fast, accessible and built to last, not just to launch.",
     tag: "01",
   },
   {
@@ -17,18 +17,18 @@ const solutions = [
     tag: "03",
   },
   {
-    title: "Custom Web Platforms",
-    body: "Tailored web applications, portals and internal tools that fit how your business actually works.",
+    title: "SEO & Performance",
+    body: "Technical SEO, Core Web Vitals and clean structure built in from day one — so you get found and stay fast.",
     tag: "04",
   },
   {
-    title: "SEO & Performance",
-    body: "Technical SEO, Core Web Vitals and analytics built in from day one — so you get found and stay fast.",
+    title: "Analytics & Leads",
+    body: "Google Analytics, event tracking and lead capture wired in from the start, so every visit is measured and no enquiry slips through.",
     tag: "05",
   },
   {
     title: "Care & Maintenance",
-    body: "We don't disappear after launch. Ongoing monitoring, updates and improvements keep your platform sharp.",
+    body: "We don't disappear after launch. Ongoing monitoring, updates and improvements keep your website sharp.",
     tag: "06",
   },
 ];

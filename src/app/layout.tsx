@@ -85,8 +85,8 @@ const jsonLd = {
   knowsAbout: [
     "Web development",
     "Web design",
+    "Business websites",
     "Landing pages",
-    "Custom web platforms",
     "SEO",
     "Web performance",
   ],

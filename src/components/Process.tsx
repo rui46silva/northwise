@@ -75,7 +75,9 @@ export function Process() {
     };
   }, []);
 
-  const activeIndex = Math.round(progress * (steps.length - 1));
+  // A step lights up only once the fill line actually reaches its position.
+  const isStepActive = (i: number) =>
+    progress >= i / (steps.length - 1) - 1e-4;
 
   return (
     <section
@@ -107,7 +109,7 @@ export function Process() {
               style={{ width: `${progress * 100}%` }}
             />
             {steps.map((s, i) => {
-              const active = i <= activeIndex;
+              const active = isStepActive(i);
               return (
                 <span
                   key={s.n}
@@ -125,7 +127,7 @@ export function Process() {
 
           <ol className="reveal grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:grid-cols-5">
             {steps.map((step, i) => {
-              const active = i <= activeIndex;
+              const active = isStepActive(i);
               return (
                 <li key={step.n} className="bg-ink-950 p-7">
                   <span

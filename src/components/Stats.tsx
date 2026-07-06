@@ -11,10 +11,10 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { value: 1, suffix: " day", label: "Typical reply time" },
-  { value: 100, label: "Performance score we build toward" },
-  { value: "∞", label: "Iterations after launch" },
-  { value: 0, label: "Off-the-shelf templates" },
+  { value: 1, suffix: " business day", label: "To reply to your enquiry" },
+  { value: "2–4", suffix: " weeks", label: "From kickoff to a live landing page" },
+  { value: 100, label: "Lighthouse performance we build toward" },
+  { value: "1:1", label: "Direct contact with who actually builds your site" },
 ];
 
 function CountUp({ to, duration = 1400 }: { to: number; duration?: number }) {

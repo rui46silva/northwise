@@ -4,7 +4,7 @@ import { leadSchema } from "@/lib/lead";
 export const runtime = "nodejs";
 
 const FROM = process.env.CONTACT_FROM_EMAIL ?? "leads@northwise.pt";
-const TO = process.env.CONTACT_TO_EMAIL ?? "hello@northwise.pt";
+const TO = process.env.CONTACT_TO_EMAIL ?? "geral@northwise.pt";
 
 function escapeHtml(value: string) {
   return value

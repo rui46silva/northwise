@@ -51,10 +51,10 @@ export function Contact() {
             <p>
               Prefer email?{" "}
               <a
-                href="mailto:hello@northwise.pt"
+                href="mailto:geral@northwise.pt"
                 className="font-medium text-brand-400 hover:text-brand-300"
               >
-                hello@northwise.pt
+                geral@northwise.pt
               </a>
             </p>
             <p>Based in Northern Portugal — working with clients worldwide.</p>

@@ -3,32 +3,32 @@ import { SectionHeading } from "./SectionHeading";
 const solutions = [
   {
     title: "Business Websites",
-    body: "Corporate and business websites that present your work with clarity — fast, accessible and built to last, not just to launch.",
+    body: "A clear, professional website that presents your business properly and builds trust — delivered in weeks, built to last years.",
     tag: "01",
   },
   {
-    title: "Web Design",
-    body: "Interfaces with intent. Clean, conversion-focused design that reflects your brand and removes friction for your users.",
+    title: "Landing Pages",
+    body: "One page, one goal: turning visitors into contacts. Ideal for campaigns, product launches and validating a new idea fast.",
     tag: "02",
   },
   {
-    title: "Landing Pages",
-    body: "High-performance pages engineered around a single goal: turning the right visitors into qualified leads.",
+    title: "Web Design",
+    body: "Clean, conversion-focused design shaped around your brand — not a recycled template your competitors are also using.",
     tag: "03",
   },
   {
     title: "SEO & Performance",
-    body: "Technical SEO, Core Web Vitals and clean structure built in from day one — so you get found and stay fast.",
+    body: "Technical SEO and speed built in from day one, so you show up on Google and load instantly on any device.",
     tag: "04",
   },
   {
     title: "Analytics & Leads",
-    body: "Google Analytics, event tracking and lead capture wired in from the start, so every visit is measured and no enquiry slips through.",
+    body: "Google Analytics, event tracking and a lead form wired straight to your inbox — you always know what's working.",
     tag: "05",
   },
   {
     title: "Care & Maintenance",
-    body: "We don't disappear after launch. Ongoing monitoring, updates and improvements keep your website sharp.",
+    body: "Launch is the start, not the end. Updates, backups and improvements at a predictable cost — no surprises, no runaround.",
     tag: "06",
   },
 ];

@@ -5,7 +5,7 @@ export const siteConfig = {
     "Northwise builds strategic websites, landing pages and high-impact web experiences for businesses that need clarity, performance and growth. A web development studio in Northern Portugal.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://northwise.pt",
   locale: "en",
-  email: process.env.CONTACT_TO_EMAIL ?? "hello@northwise.pt",
+  email: process.env.CONTACT_TO_EMAIL ?? "geral@northwise.pt",
   location: "Northern Portugal",
   keywords: [
     "web development studio",

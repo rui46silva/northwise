@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { siteConfig } from "@/lib/site";
 import { Analytics } from "@/components/Analytics";
 import "./globals.css";
@@ -119,6 +120,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Magnetic } from "./Magnetic";
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -49,15 +48,17 @@ export function Hero() {
   return (
     <section className="relative isolate flex min-h-screen items-center overflow-hidden pb-[22vh] pt-24">
       {/* Space background: brand horizon photo */}
-      <div ref={spaceRef} className="hero-space will-change-transform" aria-hidden="true">
-        <Image
-          src="/background-northwise.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          quality={85}
-        />
+      <div className="hero-space" aria-hidden="true">
+        <div ref={spaceRef} className="hero-parallax will-change-transform">
+          <Image
+            src="/background-northwise.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            quality={85}
+          />
+        </div>
         <div className="hero-fade" />
       </div>
 
@@ -85,16 +86,12 @@ export function Hero() {
             </p>
 
             <div className="mt-10 flex animate-fade-up flex-col justify-center gap-3 sm:flex-row">
-              <Magnetic className="w-full sm:w-auto">
-                <a href="#start" className="btn-primary w-full sm:w-auto">
-                  <span className="bracket">Start a project.</span>
-                </a>
-              </Magnetic>
-              <Magnetic className="w-full sm:w-auto">
-                <a href="#solutions" className="btn-ghost w-full sm:w-auto">
-                  Explore solutions
-                </a>
-              </Magnetic>
+              <a href="#start" className="btn-primary w-full sm:w-auto">
+                <span className="bracket">Start a project.</span>
+              </a>
+              <a href="#solutions" className="btn-ghost w-full sm:w-auto">
+                Explore solutions
+              </a>
             </div>
           </div>
         </div>

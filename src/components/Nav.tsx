@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
-import { Magnetic } from "./Magnetic";
 import { siteConfig } from "@/lib/site";
 
 export function Nav() {
@@ -80,11 +79,9 @@ export function Nav() {
         </nav>
 
         <div className="flex items-center gap-3 md:justify-self-end">
-          <Magnetic className="hidden md:inline-block">
-            <a href="#start" className="btn-primary">
-              <span className="bracket">Start a project.</span>
-            </a>
-          </Magnetic>
+          <a href="#start" className="hidden btn-primary md:inline-flex">
+            <span className="bracket">Start a project.</span>
+          </a>
 
           {/* Mobile toggle */}
           <button

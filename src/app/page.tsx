@@ -7,14 +7,12 @@ import { Thinking } from "@/components/Thinking";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Stats } from "@/components/Stats";
-import { ScrollProgress } from "@/components/ScrollProgress";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
     <>
-      <ScrollProgress />
       <Nav />
       <main id="main">
         <Hero />

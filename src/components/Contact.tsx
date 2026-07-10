@@ -121,7 +121,7 @@ export function Contact() {
                   <label htmlFor="projectType" className="field-label">
                     Project type *
                   </label>
-                  <select id="projectType" name="projectType" required defaultValue="" className="field-input">
+                  <select id="projectType" name="projectType" required defaultValue="" className="field-input field-select">
                     <option value="" disabled>
                       Select…
                     </option>
@@ -136,7 +136,7 @@ export function Contact() {
                   <label htmlFor="budget" className="field-label">
                     Budget *
                   </label>
-                  <select id="budget" name="budget" required defaultValue="" className="field-input">
+                  <select id="budget" name="budget" required defaultValue="" className="field-input field-select">
                     <option value="" disabled>
                       Select…
                     </option>

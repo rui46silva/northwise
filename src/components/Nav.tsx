@@ -48,7 +48,7 @@ export function Nav() {
           aria-label={`${siteConfig.name} home`}
           className="shrink-0 md:justify-self-start"
         >
-          <Logo className="h-9" />
+          <Logo className="h-9" withWordmark />
         </a>
 
         {/* Desktop pill nav */}
